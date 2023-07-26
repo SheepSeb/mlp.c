@@ -1,13 +1,15 @@
 CC=gcc
 CFLAGS=-lm -O3
 
-run: main
+
+run: clean main
 	./main
 
-main: main.c
-	$(CC) -o main main.c $(CFLAGS)
 
 clean:
 	rm -f main
+
+main: main.c
+	$(CC) -o main main.c $(CFLAGS)
 
 .PHONY: run clean
